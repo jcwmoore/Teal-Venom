@@ -1,5 +1,5 @@
 {
-  "name": "Teal Venom",
+  "name": "teal-venom",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -16,6 +16,10 @@
     "jquery": "*",
     "jquery-ui-bundle": "*",
     "bootstrap": "*",
-    "knockout": "*"
+    "knockout": "*",
+    "gulp": "*",
+    "gulp-mocha": "*",
+    "mocha": "*",
+    "should": "*"
   }
 }
