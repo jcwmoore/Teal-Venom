@@ -1,0 +1,9 @@
+extends ../shared/layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  if user
+    p this won't exist #{user.name}
+  else
+    p not loged in
