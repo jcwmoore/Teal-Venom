@@ -1,0 +1,5 @@
+{
+  "ambientDependencies": {
+    "sqlite3": "registry:dt/sqlite3#2.2.3+20160316155526"
+  }
+}

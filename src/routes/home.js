@@ -1,11 +1,13 @@
 var express = require('express');
 var router = express.Router();
+var mvc = require('./mvcRouter');
 var home = require('../controllers/homeController');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {    
-    var model = new home.Controller().index();
-    res.render('home/index', model);
+    var route = new mvc.Router(req, res, next, 'home/index', new home.Controller());
+    route.beginAction('index');
 });
+
 
 module.exports = router;

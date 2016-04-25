@@ -1,0 +1,15 @@
+extends ../shared/layout
+
+block content
+    form(name="login", action="/user/register", method="post")
+        div
+            label(for="user") UserName:
+            input(type="text", name="user")
+        div
+            label(for="pass") Password:
+            input(type="password", name="pass")
+        div
+            label(for="passconfirm") Password:
+            input(type="password", name="passconfirm")
+        div
+            input(type="submit", value="login")

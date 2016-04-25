@@ -14,8 +14,12 @@ class HomeController {
     /**
      * the default action for home
      */
-    index() {
-        return { title: "HomeController/index" };
+    index(model, renderCallback) {
+        setTimeout(function() {
+            
+            renderCallback({message: 'i r broke'}, { title: "HomeController/index" });
+        }, 100);
+        
     }
 }
 exports.Controller = HomeController;

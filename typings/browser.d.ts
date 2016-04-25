@@ -5,3 +5,4 @@
 /// <reference path="browser/ambient/node/index.d.ts" />
 /// <reference path="browser/ambient/serve-static/index.d.ts" />
 /// <reference path="browser/ambient/should/index.d.ts" />
+/// <reference path="browser/ambient/sqlite3/index.d.ts" />

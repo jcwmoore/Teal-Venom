@@ -15,10 +15,3 @@ describe('learning', function(){
     // });
 });
 
-describe('homeController', function () {
-    it('index successful', function () {
-        var c = new target.Controller();
-        var result = c.index();        
-        result.should.have.property('title', 'HomeController/index');
-    })
-})
