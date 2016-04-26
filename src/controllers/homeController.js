@@ -3,23 +3,13 @@
 /**
  * The default controller
  */
-class HomeController {
+function HomeController() {
     
-    /**
-     * The default controller
-     */
-    constructor() {
-        
-    }
     /**
      * the default action for home
      */
-    index(model, renderCallback) {
-        setTimeout(function() {
-            
-            renderCallback({message: 'i r broke'}, { title: "HomeController/index" });
-        }, 100);
-        
+    this.index = function (model, renderCallback) {
+        renderCallback(null, { title: "HomeController/index" });
     }
 }
 exports.Controller = HomeController;
