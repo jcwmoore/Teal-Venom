@@ -6,6 +6,9 @@ var home = require('../controllers/homeController');
 /* GET home page. */
 router.get('/', function(req, res, next) {    
     var route = new mvc.Router(req, res, next, 'home/index', new home.Controller());
+    if(req.isAuthenticated()){
+        console.log('auth');
+    }
     route.beginAction('index');
 });
 

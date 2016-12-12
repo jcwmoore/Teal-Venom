@@ -22,6 +22,12 @@ function SerializeUser(user, cb){
 }
 
 function DeserializeUser(id, cb) {
+    for(var name in users){
+        var record = users[name];
+        if(record.Id == id){
+            return cb(null, record);
+        }
+    }
     for (var i = 0, len = users.length; i < len; i++) {
         var record = users[i];
         if(record.Id == id){
