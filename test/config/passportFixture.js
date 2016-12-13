@@ -23,4 +23,12 @@ describe('passport', function() {
         teal.Strategy('John', 'password', cb);
         cbCalled.should.be.true();
     });
+    it('serialize', function () {
+        var cbCalled = false;
+        var  user = { Id: 'abc' };        
+        var cb = function (err, id) {
+            cbCalled = true;
+            id.should().be.equal('abc');
+        }
+    })
 });
