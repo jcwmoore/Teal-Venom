@@ -28,7 +28,18 @@ describe('passport', function() {
         var  user = { Id: 'abc' };        
         var cb = function (err, id) {
             cbCalled = true;
-            id.should().be.equal('abc');
-        }
-    })
+            id.should.be.equal('abc');
+        };
+        teal.Serialize(user, cb);
+        cbCalled.should.be.true();
+    });
+    it('deserialize valid', function () {
+        var cbCalled = false;
+        var cb = function (err, user) {
+            cbCalled = true;
+            user.Name.should.be.equal('Jingleheimer');
+        };
+        teal.Deserialize(3, cb);
+        cbCalled.should.be.true();
+    });
 });
