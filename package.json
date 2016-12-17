@@ -29,6 +29,7 @@
     "gulp-tsb": "*",
     "marked": "*",
     "mocha": "*",
-    "should": "*"
+    "should": "*",
+    "eslint": "*"
   }
 }

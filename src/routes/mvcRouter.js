@@ -21,8 +21,9 @@ function MvcRouter(req, res, next, view, controller) {
      * invokes an action on the controller
      * @param  {string} actionName - action to invoke
      */
-    this.beginAction = function (actionName){
+    self.beginAction = function (actionName){
         if(self.controller[actionName]) {
+            var promise = new Promise();
             self.controller[actionName](self.req.body, self.endAction);
         } else {
             throw new Error('Invalid Operation');
@@ -34,7 +35,7 @@ function MvcRouter(req, res, next, view, controller) {
      * @param  {object} err - error object, if this is present the view will not be rendered
      * @param  {object} model - model to forward to the view
      */
-    this.endAction = function (err, model){
+    self.endAction = function (err, model){
         if(err){
             self.next(err);
         } else if(model) {
