@@ -18,7 +18,9 @@
     "jstransformer-markdown-it" : "2.0.x",
     "passport": "*",
     "passport-local": "*",
-    "app-root-path": "*"
+    "app-root-path": "*",
+    "sequelize": "3.27.x",
+    "sqlite3": "3.1.8"
   },
   "devDependencies": {
     "browser-sync": "*",
