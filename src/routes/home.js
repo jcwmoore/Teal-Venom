@@ -8,7 +8,6 @@ router.get('/', function(req, res, next) {
     var route = new mvc.Router(req, res, next, 'home/index', new home.Controller());
     if(req.isAuthenticated()){
         console.log('auth');
-        console.l
     }
     route.beginAction('index');
 });

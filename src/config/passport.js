@@ -28,12 +28,6 @@ function DeserializeUser(id, cb) {
             return cb(null, record);
         }
     }
-    for (var i = 0, len = users.length; i < len; i++) {
-        var record = users[i];
-        if(record.Id == id){
-            return cb(null, record);
-        }
-    }
     return cb(new Error('record not found'));
 }
 
