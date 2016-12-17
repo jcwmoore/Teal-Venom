@@ -23,7 +23,7 @@ function MvcRouter(req, res, next, view, controller) {
      */
     self.beginAction = function (actionName){
         if(self.controller[actionName]) {
-            var promise = new Promise();
+            //var promise = new Promise();
             self.controller[actionName](self.req.body, self.endAction);
         } else {
             throw new Error('Invalid Operation');
