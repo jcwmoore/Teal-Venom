@@ -10,6 +10,10 @@ var Strategy = require('passport-local').Strategy;
 var home = require('./routes/home');
 var user = require('./routes/user');
 var tealPassport = require('./config/passport');
+var userm = require('./models/user');
+userm.sync({ force: true }).then(function() {
+  userm.create({userName: 'john', password: 'password' });
+});
 
 passport.use(new Strategy(tealPassport.Strategy));
 passport.serializeUser(tealPassport.Serialize);
